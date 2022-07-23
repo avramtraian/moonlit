@@ -1,0 +1,15 @@
+# Copyright to Avram Traian. 2022 - 2022.
+# File created on July 22 2022.
+
+# Binaries & Intermediates
+Binaries/
+Intermediates/
+
+!Moonlit/ThirdParty/premake/Binaries/
+
+# Visual Studio Project Files
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
