@@ -16,6 +16,9 @@ project "MoonlitEd"
 	targetdir "%{wks.location}/Binaries/%{cfg.platform}/%{cfg.buildcfg}"
 	objdir "%{wks.location}/Intermediates/Build/%{prj.name}/%{cfg.buildcfg}"
 
+	pchheader "MoonlitEdPCH.h"
+	pchsource "../../MoonlitEd/Source/MoonlitEdPCH.cpp"
+
 	files {
 		"%{prj.location}/Source/**.h",
 		"%{prj.location}/Source/**.cpp"
@@ -29,6 +32,10 @@ project "MoonlitEd"
 		"%{prj.location}/Source",
 
 		IncludeDirectories["Moonlit"]
+	}
+
+	forceincludes {
+		"MoonlitEdPCH.h"
 	}
 
 	libdirs {
